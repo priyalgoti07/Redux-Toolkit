@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-const user = createSlice({
+const userSlice = createSlice({
     name: 'user',
     initialState: [],
     reducers: {
@@ -9,5 +9,5 @@ const user = createSlice({
         deleteUsers(state, action) { },
     }
 })
-
-export {user}
+console.log(userSlice);
+export  default userSlice.reducer;

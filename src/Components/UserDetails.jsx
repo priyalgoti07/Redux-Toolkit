@@ -1,8 +1,14 @@
 import React from 'react'
 import DeleteAllUser from './DeleteAllUser'
 import styled from "styled-components";
+import { fackData } from '../api';
 
 const UserDetails = () => {
+
+  const addUser=(payload)=>{
+        console.log(payload);
+  }
+
   return (
     <Wrapper>
             <>
@@ -10,12 +16,12 @@ const UserDetails = () => {
     <div className="content">
         <div className="admin-table">
             <div className="admin-subtitle">List of User Details</div>
-            <button className='btn add-btn'>Add New User</button>
+            <button className='btn add-btn' onClick={()=> addUser(fackData())}>Add New User</button>
         </div>
-        <ul>
+        {/* <ul>
             <li>hii</li>
             <li>hii</li>
-        </ul>
+        </ul> */}
         <hr />
         <DeleteAllUser/>
     </div>
